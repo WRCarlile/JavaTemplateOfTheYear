@@ -19,7 +19,7 @@ public class App {
 
         String userInput = request.queryParams("blank");
         App newApp = new App();
-        String results = newApp.methodName(userInput);
+        Boolean results = newApp.methodName(userInput);
         model.put("results", results);
 
         model.put("template", "templates/detector.vtl");
@@ -27,6 +27,8 @@ public class App {
       }, new VelocityTemplateEngine());
   }
 
-  public static String methodName(String inputVar) {}
+  public static Boolean methodName(String userInput) {
+    return true;
+  }
 
 }
